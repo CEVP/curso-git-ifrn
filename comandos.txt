@@ -1,0 +1,6 @@
+1- git init
+2- git config --local user.name "Carlos Eduardo Vieira Praxedes"
+3- git add dados.txt
+4- git commit -m "Primeiro commit"
+5- git remote add origin https://github.com/CEVP/curso-git-ifrn.git
+6- git push -u origin master
