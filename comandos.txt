@@ -1,0 +1,17 @@
+Carlos Eduardo Vieira Praxedes 
+git clone https://gitlab.com/mizael.cortez/curso-branchs-ifrn-ead
+git checkout main
+cd curso-branchs-ifrn-ead
+echo "teste" > texto.txt
+git add texto.txt
+git commit -m "texto"
+git checkout -b feature-1
+echo "modificação na feature-1" > texto.txt
+git add texto.txt
+git commit -m "altera texto.txt na feature-1"
+echo "modificação na main" > texto.txt
+git add texto.txt
+git commit -m "altera texto.txt na main
+git merge feature-1
+git add texto.txt
+git commit -m "resolve conflito"
