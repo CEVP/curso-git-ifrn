@@ -1,6 +1,21 @@
-1- git init
-2- git config --local user.name "Carlos Eduardo Vieira Praxedes"
-3- git add dados.txt
-4- git commit -m "Primeiro commit"
-5- git remote add origin https://github.com/CEVP/curso-git-ifrn.git
-6- git push -u origin master
+echo "arquivo 1" > arquivo1.txt
+echo "arquivo 2" > arquivo2.txt
+echo "arquivo 3" > arquivo3.txt
+git add .
+git commit -m "Commit com três arquivos"
+echo "alteração arquivo 1" > arquivo1.txt
+echo "alteração arquivo 2" > arquivo2.txt
+git diff
+git add arquivo1.txt arquivo2.txt
+git commit -m "alteraçoes no arquivo 1 e arquivo 2"
+git log
+git revert HEAD --no-edit
+echo "Modificaçao temporaria" > arquivo3.txt
+git stash
+git checkout -b nova-branch
+git checkout main
+git stash pop
+git reflog
+git tag -a v1.0 -m "Versao inicial" 1fc9d310b886ff921cdf9e835233e5493ebdb6f6
+git push -u origin master
+git push --tags

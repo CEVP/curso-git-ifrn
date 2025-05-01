@@ -1,0 +1,18 @@
+stages:
+  - check
+  - deploy
+
+check_index:
+  stage: check
+  script:
+    - if [ ! -f public/index.html ]; then echo "index.html não encontrado!"; exit 1; fi
+
+pages:
+  stage: deploy
+  script:
+    - echo "Fazendo deploy"
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
